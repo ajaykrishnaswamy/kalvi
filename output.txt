@@ -1,0 +1,128 @@
+
+> kalvios@ dev /Users/ajaykrishnaswamy/git/kalvi
+> pnpm run backend:run & pnpm run frontend:run
+
+
+> kalvios@ frontend:run /Users/ajaykrishnaswamy/git/kalvi
+> turbo dev
+
+
+> kalvios@ backend:run /Users/ajaykrishnaswamy/git/kalvi
+> docker-compose up
+
+• Packages in scope: @repo/eslint-config, @repo/tailwind-config, @repo/typescript-config, @repo/ui, admin, learner
+• Running dev in 6 packages
+• Remote caching disabled
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [api internal] load build definition from Dockerfile
+#1 transferring dockerfile: 240B done
+#1 WARN: ConsistentInstructionCasing: Command 'from' should match the case of the command majority (uppercase) (line 1)
+#1 DONE 0.0s
+
+#2 [api auth] library/python:pull token for registry-1.docker.io
+admin:dev: cache bypass, force executing 2534b952d2dfa41b
+learner:dev: cache bypass, force executing 15d75715392834d3
+#2 DONE 0.0s
+
+#3 [api internal] load metadata for docker.io/library/python:3.12.2
+learner:dev: 
+learner:dev: > learner@0.1.0 dev /Users/ajaykrishnaswamy/git/kalvi/apps/learner
+learner:dev: > next dev -p 3001
+learner:dev: 
+admin:dev: 
+admin:dev: > admin@0.1.0 dev /Users/ajaykrishnaswamy/git/kalvi/apps/admin
+admin:dev: > next dev
+admin:dev: 
+#3 DONE 0.5s
+
+#4 [api internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [api 1/6] FROM docker.io/library/python:3.12.2@sha256:19973e1796237522ed1fcc1357c766770b47dc15854eafdda055b65953fe5ec1
+#5 resolve docker.io/library/python:3.12.2@sha256:19973e1796237522ed1fcc1357c766770b47dc15854eafdda055b65953fe5ec1 done
+#5 DONE 0.0s
+
+#6 [api internal] load build context
+#6 transferring context: 1.68kB done
+#6 DONE 0.0s
+
+#7 [api 2/6] RUN pip3 install poetry
+#7 CACHED
+
+#8 [api 3/6] WORKDIR /usr/src/app
+#8 CACHED
+
+#9 [api 4/6] COPY poetry.lock pyproject.toml /usr/src/app/
+#9 CACHED
+
+#10 [api 5/6] COPY . .
+#10 CACHED
+
+#11 [api 6/6] RUN poetry install
+admin:dev:    ▲ Next.js 14.1.0
+admin:dev:    - Local:        http://localhost:3000
+learner:dev:    ▲ Next.js 14.1.0
+admin:dev: 
+learner:dev:    - Local:        http://localhost:3001
+learner:dev: 
+#11 0.576 Creating virtualenv api-VA82Wl8V-py3.12 in /root/.cache/pypoetry/virtualenvs
+#11 0.938 Installing dependencies from lock file
+#11 1.011 
+#11 1.011 Package operations: 29 installs, 0 updates, 0 removals
+#11 1.011 
+#11 1.011   - Installing pyasn1 (0.5.1)
+#11 1.189   - Installing asgiref (3.7.2)
+#11 1.191   - Installing cachetools (5.3.3)
+#11 1.192   - Installing certifi (2024.2.2)
+#11 1.194   - Installing charset-normalizer (3.3.2)
+#11 1.195   - Installing idna (3.6)
+#11 1.197   - Installing protobuf (4.25.3)
+#11 1.199   - Installing pyasn1-modules (0.3.0)
+#11 1.200   - Installing pyparsing (3.1.2)
+#11 1.202   - Installing rsa (4.9)
+#11 1.202   - Installing sqlparse (0.4.4)
+#11 1.203   - Installing urllib3 (2.2.1)
+#11 1.508   - Installing django (5.0.2)
+#11 1.509   - Installing google-auth (2.28.1)
+#11 1.509   - Installing googleapis-common-protos (1.62.0)
+#11 1.510   - Installing httplib2 (0.22.0)
+#11 1.510   - Installing pytz (2024.1)
+#11 1.511   - Installing requests (2.31.0)
+learner:dev:  ✓ Ready in 1820ms
+admin:dev:  ✓ Ready in 1856ms
+#11 2.369   - Installing djangorestframework (3.14.0)
+#11 2.370   - Installing google-api-core (2.17.1)
+#11 2.371   - Installing google-auth-httplib2 (0.2.0)
+#11 2.372   - Installing pyjwt (2.8.0)
+#11 2.373   - Installing typing-extensions (4.9.0)
+#11 2.373   - Installing uritemplate (4.1.1)
+#11 2.493   - Installing django-cors-headers (4.3.1)
+#11 2.494   - Installing djangorestframework-simplejwt (5.3.1)
+#11 2.494   - Installing google-api-python-client (2.121.0)
+#11 2.495   - Installing psycopg (3.1.18)
+#11 2.495   - Installing redis (5.0.3)
+#11 3.111 
+#11 3.111 Installing the current project: api (0.1.0)
+#11 3.114 
+#11 3.114 /usr/src/app/api does not contain any element
+#11 ERROR: process "/bin/sh -c poetry install" did not complete successfully: exit code: 1
+------
+ > [api 6/6] RUN poetry install:
+2.373   - Installing uritemplate (4.1.1)
+2.493   - Installing django-cors-headers (4.3.1)
+2.494   - Installing djangorestframework-simplejwt (5.3.1)
+2.494   - Installing google-api-python-client (2.121.0)
+2.495   - Installing psycopg (3.1.18)
+2.495   - Installing redis (5.0.3)
+3.111 
+3.111 Installing the current project: api (0.1.0)
+3.114 
+3.114 /usr/src/app/api does not contain any element
+------
+ ELIFECYCLE  Command failed with exit code 17.
+ ELIFECYCLE  Command failed.
+ ELIFECYCLE  Command failed.
+learner:dev: [?25h
+admin:dev: [?25h
